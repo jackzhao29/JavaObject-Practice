@@ -17,9 +17,12 @@ public class BinarySearch {
 	        for(int i=nums.length-1;i>=0;i--){
 	            System.out.print(nums[i]+" ");
 	        }
-	        System.out.print("====");
+	        System.out.println("====");
 	        if(Arrays.binarySearch(nums,765)>0){
-	            System.out.println("true");
+	            System.out.println("Arrays.binarySearch:true");
+	        }else
+	        {
+	        	System.out.println("Arrays.binarySearch:false");
 	        }
 	        System.out.println("binarySearch耗时："+(System.currentTimeMillis()-start));
 
@@ -28,6 +31,7 @@ public class BinarySearch {
 	        for(int i=0;i<nums.length;i++){
 	            if(nums[i]==765){
 	                System.out.println("for:true");
+	                break;
 	            }
 	        }
 	        System.out.println("for耗时："+(System.currentTimeMillis()-enStart));
