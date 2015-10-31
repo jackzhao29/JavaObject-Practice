@@ -12,7 +12,8 @@ public class MyThreadSynchronized extends Thread {
 	}
 	
 	public void run(){
-		user.oper(y);
+		//user.oper(y);
+		user.opern(y);
 	}
 
 }
