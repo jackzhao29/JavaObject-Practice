@@ -8,9 +8,9 @@ import java.util.Hashtable;
  */
 public class LRUCacheByHashTable {
     
-    private final   int cacheSize;
-    private final   Hashtable<Object,Entry> nodes; //缓存容器
-    private  int currentSize;
+    private final  int cacheSize; //缓存大小
+    private final  Hashtable<Object,Entry> nodes; //缓存容器
+    private  int currentSize; //当前缓存对象数量
     private Entry first; //链表头
     private Entry last; //链表尾
     
@@ -42,6 +42,7 @@ public class LRUCacheByHashTable {
         if(node==null){
             //缓存容器是否已经超过大小
             if(currentSize >= cacheSize){
+                //将最少使用的删除
                 nodes.remove(last.key);
                 removeLast();
             }else{
@@ -80,7 +81,8 @@ public class LRUCacheByHashTable {
     }
     
     /**
-     * 删除链表尾部节点，即使用最后使用的entry
+     * 删除链表尾部节点
+     * 表示删除最少使用的缓存对象
      */
     private void removeLast(){
         //链表尾不为空，则将链表尾指向null，删除链表尾(删除最使用的缓存对象)
@@ -135,12 +137,14 @@ public class LRUCacheByHashTable {
 }
 
 /**
- * 链表结构体
+ * 链表节点
  */
 class Entry{
     Entry prev; //前一节点
     Entry next; //后一节点
     Object key; //键
     Object value; //值
+    
+    public Entry(){}
 }
 
