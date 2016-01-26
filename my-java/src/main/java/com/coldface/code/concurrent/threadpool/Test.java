@@ -18,7 +18,7 @@ public class Test {
 		//ExecutorService pool=Executors.newFixedThreadPool(2);
 		
 		//创建一个使用单个work线程的Executor
-		//ExecutorService signPool=Executors.newSingleThreadExecutor();
+		ExecutorService signPool=Executors.newSingleThreadExecutor();
 		
 		//创建可变大小的线程池
 		//ExecutorService cachePool=Executors.newCachedThreadPool();
