@@ -8,7 +8,14 @@ public class Prime {
     public static void main(String[] args){
         for(int i=1;i<=100;i++){
             if(isPrime(i)){
-                System.out.println(i);
+                System.out.print(i+" ");
+            }
+        }
+        System.out.println("");
+        
+        for(int i=3;i<100;i+=2){
+            if(isPrime1(i)){
+                System.out.print(i+" ");
             }
         }
     }
@@ -29,6 +36,17 @@ public class Prime {
                     flag=false;
                     break;
                 }
+            }
+        }
+        return flag;
+    }
+    
+    public static boolean isPrime1(int a){
+        boolean flag=true;
+        for(int j=3;j<Math.sqrt(a);j++){
+            if(a%j==0){
+                flag=true;
+                break;
             }
         }
         return flag;
