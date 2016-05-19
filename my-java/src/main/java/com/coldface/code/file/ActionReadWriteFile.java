@@ -18,6 +18,7 @@ import com.google.common.io.Files;
  */
 public class ActionReadWriteFile {
 
+
     public static void main(String[] args) {
         // 读取的文件
         String inFileName = "/Users/coldface/Documents/indata.txt";
