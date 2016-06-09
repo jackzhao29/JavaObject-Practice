@@ -21,9 +21,9 @@ public class ActionReadWriteFile {
 
     public static void main(String[] args) {
         // 读取的文件
-        String inFileName = "/Users/coldface/Documents/indata.txt";
+        String inFileName = "indata.txt";
         // 写入的文件
-        File outFileName = new File("/Users/coldface/Documents/outdata.txt");
+        File outFileName = new File("outdata.txt");
         readWriteFile(inFileName, outFileName);
         System.out.println("执行完毕....");
     }
@@ -39,7 +39,8 @@ public class ActionReadWriteFile {
             for (String line : lines) {
                 System.out.println(i + "===" + line);
                 if (line != null) {
-                    line += "操作之后的文本";
+                    //line += "操作之后的文本";
+                    line+=line;
                     BufferedWriter out = new BufferedWriter(new FileWriter(outFileName, true));
                     out.write(line);
                     out.newLine();
