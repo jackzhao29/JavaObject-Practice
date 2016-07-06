@@ -1,0 +1,8 @@
+Akka中主要有三种消息类型:
+1.Fire and Forget模式
+  这种发送消息的模式是Akka中所推荐的，也就是单向消息模式，Actor在发送消息之后，并不需要获取响应。这种方式在java中需要使用ActorRef或ActorSelection的tell方法。
+  和消息队列类似，直接调用该方法即可，程序不会阻塞，会直接执行后面的操作，但是消息已经发送给目标的Actor了
+2.Send and Receive模式
+  这种发送消息的模式是双向的，当Actor在发送消息之后，会接受到一个Future对象，通过这个可以异步的接收到对方的结果消息。
+3.Publisher-Subscriber模式
+  这种模式就是消息的发布和订阅。
