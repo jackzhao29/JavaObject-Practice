@@ -1,7 +1,6 @@
 package com.coldface.code.akka.messagetype;
 
 /**
- * 
  * 类FilteredRecord.java的实现描述：TODO通过了拦截器的日志记录
  * 
  * @author coldface
