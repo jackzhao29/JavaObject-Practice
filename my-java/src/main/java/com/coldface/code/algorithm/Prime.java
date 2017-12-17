@@ -45,7 +45,7 @@ public class Prime {
         boolean flag=true;
         for(int j=3;j<Math.sqrt(a);j++){
             if(a%j==0){
-                flag=true;
+                flag=false;
                 break;
             }
         }

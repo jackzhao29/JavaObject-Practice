@@ -12,7 +12,7 @@ public class NumberToExit {
 
         // TODO Auto-generated method stub 
         
-        System.out.println(numberToExit(7));
+        System.out.println(numberToExit(17));
 
     }
 
